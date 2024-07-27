@@ -1,0 +1,23 @@
+@mixin sm{ //Mixins styles "re-used" throughout your stylesheet
+    @media(max-width: 738px) { //if condition is true
+        @content;
+        }
+}
+
+@mixin md {
+
+    //Mixins styles "re-used" throughout your stylesheet
+    @media(max-width: 1024px) {
+        //if condition is true
+        @content;
+    }
+}
+
+@mixin lg {
+
+    //Mixins styles "re-used" throughout your stylesheet
+    @media(max-width: 1366px) {
+        //if condition is true
+        @content;
+    }
+}
