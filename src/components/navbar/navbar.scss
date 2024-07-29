@@ -1,47 +1,125 @@
 @import "../../responsive.scss";
+
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    padding: 0 20px;
+    height: 60px;
 
-    a{
+    a {
         transition: all 0.4s ease;
 
-        &:hover{
+        @include sm {
+            display: none;
+        }
+
+        &:hover {
             scale: 1.05;
         }
     }
 
-    .left{
+    .left {
         flex: 3;
         display: flex;
         align-items: center;
         gap: 50px;
-        .logo{
-            font-weight: bold;
+
+        .logo {
+            font-weight: bolder;
             font-size: 20px;
             display: flex;
             gap: 10px;
             align-items: center;
+            padding: 7px 7px;
+
+            span {
+
+                @include md {
+                    display: none;
+                }
+
+                @include sm {
+                    display: initial;
+                }
+            }
         }
+
+        @include md {
+            background-color: transparent;
+        }
+
     }
 
-    .right{
+    .right {
         flex: 2;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        background-color: #D6EFD8;
         height: 100%;
+        background-color: #D6EFD8;
 
-        a{
-            padding: 12px 24px;
-            margin: 20px;
+        a {
+            padding: 7px 12px;
+            margin: 10px;
         }
 
-        .register{
-            background-color: #508D4E ;
-            border-radius: 4px;
+        @include md {
+            padding: 7px 12px;
+            margin: 25px;
+            background-color: transparent;
+        }
+
+
+    }
+
+    .register {
+        background-color: #508d4e;
+        border-radius: 4px;
+
+    }
+
+    .menuIcon {
+        display: none;
+        z-index: 999; //any number > 1 , so it always stays at top like photoshop layer
+
+        img {
+            width: 36px;
+            height: auto;
+            cursor: pointer;
+
+        }
+
+        @include sm {
+            display: inline;
+        }
+    }
+
+    .menu {
+        position: absolute;
+        background-color: #d6efd8;
+        color: black;
+        height: 100vh;
+        width: 45%;
+        top: 0;
+        right: -50%;
+        transition: all 0.7s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: large;
+
+        &.active {
+            right: 0;
+        }
+
+
+        @include sm {
+            a {
+                display: initial;
+            }
         }
     }
 }
