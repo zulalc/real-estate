@@ -1,0 +1,35 @@
+@import "../../responsive.scss";
+
+.home {
+    background-image: url('bailey-anselme-Bkp3gLygyeA-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 150%;
+    min-height: 500px;
+    display: flex;
+
+    .text-container {
+        flex: 3;
+    }
+
+    .img-container {
+        flex: 2;
+        background-color: #D6EFD8;
+    }
+
+    @include md {
+        background-size: 150%;
+        width: 100%;
+        min-height: 400px;
+    }
+
+    @include sm {
+        background-size: 200%;
+        width: 100%;
+        min-height: 300px;
+    }
+
+
+}
