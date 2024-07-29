@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./navbar.scss";
 
 function Navbar() {
