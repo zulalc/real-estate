@@ -17,6 +17,7 @@ nav {
 
         &:hover {
             scale: 1.05;
+            color: #95D2B3;
         }
     }
 
@@ -58,15 +59,15 @@ nav {
         align-items: center;
         justify-content: flex-end;
         height: 100%;
-        background-color: #D6EFD8;
 
         a {
             padding: 7px 12px;
-            margin: 10px;
+            margin: 20px;
+            margin-right: -15px;
         }
 
         @include md {
-            padding: 7px 12px;
+            padding: 7px 11px;
             margin: 25px;
             background-color: transparent;
         }
@@ -77,6 +78,7 @@ nav {
     .register {
         background-color: #508d4e;
         border-radius: 4px;
+        color: white;
 
     }
 

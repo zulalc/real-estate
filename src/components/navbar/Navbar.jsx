@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./navbar.scss";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -10,16 +11,16 @@ function Navbar() {
           <img src="/logo-freepik.png" width={"25px"} />
           <span>Z-Estate</span>
         </a>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
-        <a href="/">Agents</a>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/agents">Agents</Link>
       </div>
       <div className="right">
-        <a href="/">Login</a>
-        <a href="/" className="register">
-          Sign up
-        </a>
+        <Link to="/login">Login</Link>
+        <Link to="/signup" className="register">
+          Sign Up
+        </Link>
         <div className="menuIcon">
           {open ? (
             <img src="/close.png" onClick={() => setOpen(!open)} />
@@ -28,12 +29,12 @@ function Navbar() {
           )}
         </div>
         <div className={open ? "menu active" : "menu"}>
-          <a href="/">Home</a>
-          <a href="/">About</a>
-          <a href="/">Contact</a>
-          <a href="/">Agents</a>
-          <a href="/">Login</a>
-          <a href="/">Sign up</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/agents">Agents</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/signup">Sign Up</Link>
         </div>
       </div>
     </nav>
